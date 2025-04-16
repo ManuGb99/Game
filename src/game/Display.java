@@ -1,7 +1,10 @@
+package game;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Display extends JPanel {
+
     private final Game game;
 
     public Display(Game game) {
@@ -18,7 +21,10 @@ public class Display extends JPanel {
         g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
         g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
 
-        game.render(g2);
+        g.setColor(Color.RED);
+        g.drawRect(50, 100, 200, 200);
+        g.drawOval(200, 200, 100, 100);
 
+        game.render(g2);
     }
 }
